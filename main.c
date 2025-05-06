@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <time.h>
 
 //Все базовые операции над списками
 //0. PRINTIIIIIIIIIIII
@@ -192,7 +193,7 @@ struct point* delTail(struct point** list) {
     return NULL;
 }
 
-//4. Удаление элемента перед заданным элементом
+//4. Удаление элемента после заданного элемента
 struct point* delAfter(struct point** list, int goalX, int goalY) {
     if ((*list) && (list) && ((*list)->next)) {
 
@@ -214,7 +215,7 @@ struct point* delAfter(struct point** list, int goalX, int goalY) {
     return NULL;
 }
 
-//5. Удаление элемента после заданного элемента
+//5.  Удаление элемента перед заданным элементом
 struct point* delBefore(struct point** list, int goalX, int goalY) {
     if ((*list) && (list)) {
 
@@ -395,7 +396,12 @@ struct point* addToHead4(struct point** list, int x, int y)
 
 
 int main() {
+    /*clock_t tic, toc;
+    tic = clock();
+    some_function();
+    toc = clock();
 
+    printf("%f seconds!\n\n", (double)(toc - tic) / CLOCKS_PER_SEC);*/
 
     struct point* head = NULL;//по поводу хвоста я подумал что он не нужен
     size_t count = 10;
